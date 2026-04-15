@@ -1,21 +1,23 @@
 /* =========================================================
-   BIKE RENTALS ALGARVE — NEW STYLE
-   Modern • Split Hero • Same Brand Feel
+   BIKE RENTALS ALGARVE — SUNSET STYLE
+   Warm • Premium • Conversion-focused
    ========================================================= */
 
 :root{
   --flow-dark:#1c1c1c;
-  --flow-soft:#2b2b2b;
 
-  --bg:#f4efe9;
-  --panel:#e7ded2;
+  --bg:#f7efe6;              /* areia quente */
+  --section-light:#fffaf5;   /* branco quente */
+  --section-warm:#f2e3d3;    /* areia sunset */
+  --section-accent:#e8c7a9;  /* pêssego suave */
+
   --card:#ffffff;
 
   --text:#1e1e1e;
   --text-soft:rgba(30,30,30,.65);
 
-  --border:rgba(0,0,0,.12);
-  --shadow:0 20px 45px rgba(0,0,0,.12);
+  --border:rgba(0,0,0,.10);
+  --shadow:0 20px 45px rgba(0,0,0,.10);
 
   --accent:#c46a2b;
 }
@@ -52,8 +54,8 @@ body{
   position:absolute;
   inset:0;
   background:linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.25)
+    rgba(120,60,20,0.55),   /* quente */
+    rgba(0,0,0,0.25)
   );
 }
 
@@ -123,7 +125,7 @@ h1{
   font-weight:800;
   letter-spacing:1px;
   border-radius:8px;
-  transition:.2s;
+  transition:.25s;
 }
 
 .btn:hover{
@@ -147,10 +149,20 @@ h1{
 
 .section{
   padding:90px 20px;
+  background:var(--section-light);
 }
 
 .section.alt{
-  background:var(--panel);
+  background:var(--section-warm);
+}
+
+/* 🌅 secção destaque */
+.section.sunset{
+  background:linear-gradient(
+    180deg,
+    #f7e6d5 0%,
+    #f0d2b8 100%
+  );
 }
 
 .container{
@@ -162,6 +174,7 @@ h2{
   font-size:34px;
   margin-bottom:10px;
   font-weight:800;
+  color:#2a1f18;
 }
 
 .lead{
@@ -262,7 +275,7 @@ h2{
 .footer{
   padding:30px 20px;
   border-top:1px solid var(--border);
-  background:rgba(255,255,255,.3);
+  background:rgba(255,255,255,.4);
 }
 
 .footer-inner{
